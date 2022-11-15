@@ -52,7 +52,6 @@ void Usage()
            "     Python - Python module (also accepts Py)\n"
            "     C#     - C# module (also accepts CSharp)\n"
            "     D      - D module\n"
-           "     Beef   - Beef module\n"
            "  -H print header in all supported languages to files in current directory\n"
            );
 }
@@ -97,8 +96,6 @@ bool ProcessArguments(int argc, char* argv[])
                     Language = spv::ELangCSharp;
                 } else if (language == "d") {
                     Language = spv::ELangD;
-                } else if (language == "beef") {
-                    Language = spv::ELangBeef;
                 } else
                     return false;
 
