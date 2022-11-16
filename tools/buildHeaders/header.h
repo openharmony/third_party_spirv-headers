@@ -43,7 +43,6 @@ namespace spv {
         ELangPython,   // Python
         ELangCSharp,   // CSharp
         ELangD,        // D
-        ELangBeef,     // Beef
 
         ELangAll,      // print headers in all languages to files
     };
