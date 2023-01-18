@@ -41,8 +41,6 @@ std::pair<bool, std::string> ReadFile(const std::string& path);
 void jsonToSpirv(const std::string& jsonPath, bool buildingHeaders);
 
 // For parameterizing operands.
-// The ordering here affects the printing order in the SPIR-V specification.
-// Please add new operand classes at the end.
 enum OperandClass {
     OperandNone,
     OperandId,
@@ -91,11 +89,6 @@ enum OperandClass {
     OperandRayQueryCommittedIntersectionType,
     OperandRayQueryCandidateIntersectionType,
     OperandFragmentShadingRate,
-    OperandFPDenormMode,
-    OperandFPOperationMode,
-    OperandQuantizationModes,
-    OperandOverflowModes,
-    OperandPackedVectorFormat,
 
     OperandOpcode,
 
