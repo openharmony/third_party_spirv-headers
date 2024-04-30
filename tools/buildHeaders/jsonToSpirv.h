@@ -96,13 +96,6 @@ enum OperandClass {
     OperandQuantizationModes,
     OperandOverflowModes,
     OperandPackedVectorFormat,
-    OperandCooperativeMatrixOperands,
-    OperandCooperativeMatrixLayout,
-    OperandCooperativeMatrixUse,
-    OperandInitializationModeQualifier,
-    OperandHostAccessQualifier,
-    OperandLoadCacheControl,
-    OperandStoreCacheControl,
 
     OperandOpcode,
 
@@ -191,7 +184,6 @@ public:
 
     iterator begin() { return values.begin(); }
     iterator end() { return values.end(); }
-    EValue& back() { return values.back(); }
 
 private:
     ContainerType values;
@@ -224,10 +216,6 @@ public:
     Extensions extensions;
     OperandParameters operands;
     const char* desc;
-
-    // Returns true if this enum is valid, in isolation.
-    // Otherwise emits a diagnostic to std::cerr and returns false.
-    bool IsValid(OperandClass oc, const std::string& context) const;
 };
 
 using EnumValues = EnumValuesContainer<EnumValue>;
